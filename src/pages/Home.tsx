@@ -5,10 +5,12 @@ import { textToMorse, transmit } from '../utils/morse';
 import { useFlashlight } from '../hooks/useFlashlight';
 import { clsx } from 'clsx';
 import { useLanguage } from '../contexts/LanguageContext';
+import { useSettings } from '../contexts/SettingsContext';
 
 export function Home() {
     const location = useLocation();
     const { t } = useLanguage();
+    const { transmissionMode } = useSettings();
     const [input, setInput] = useState('');
     const [isTransmitting, setIsTransmitting] = useState(false);
 
@@ -26,6 +28,9 @@ export function Home() {
 
     const morseCode = textToMorse(input);
 
+    // Determine if we should use flashlight based on setting and support
+    const shouldUseFlashlight = transmissionMode === 'flashlight' && isSupported;
+
     const handleTransmit = async () => {
         if (!input.trim() || isTransmitting) return;
 
@@ -37,7 +42,9 @@ export function Home() {
                 morseCode,
                 (state) => {
                     setCurrentSignal(state);
-                    toggle(state);
+                    if (shouldUseFlashlight) {
+                        toggle(state);
+                    }
                 },
                 signalRef
             );
@@ -46,7 +53,9 @@ export function Home() {
         } finally {
             setIsTransmitting(false);
             setCurrentSignal(false);
-            toggle(false);
+            if (shouldUseFlashlight) {
+                toggle(false);
+            }
             signalRef.current = false;
         }
     };
@@ -57,11 +66,11 @@ export function Home() {
 
     // Screen flash effect
     useEffect(() => {
-        if (currentSignal && !isSupported) {
-            // If flashlight not supported, we rely on screen flash
+        // If not using flashlight (either disabled in settings or not supported), use screen flash
+        if (currentSignal && !shouldUseFlashlight) {
             // The background change is handled by the conditional class below
         }
-    }, [currentSignal, isSupported]);
+    }, [currentSignal, shouldUseFlashlight]);
 
     return (
         <div className={clsx(
@@ -69,7 +78,8 @@ export function Home() {
             // Full screen flash overlay logic could go here, but let's keep it contained for now
             // or maybe we want the whole app to flash?
             // Let's make the whole background flash if not supported
-            currentSignal && !isSupported ? "bg-white" : ""
+            // Let's make the whole background flash if not supported or if using screen mode
+            currentSignal && !shouldUseFlashlight ? "bg-white" : ""
         )}>
             {/* Input Section */}
             <div className="bg-slate-900 p-4 rounded-2xl border border-slate-800 shadow-lg">
@@ -125,7 +135,7 @@ export function Home() {
                 )}
 
                 <div className="mt-4 flex justify-center items-center gap-2 text-slate-500 text-sm">
-                    {isSupported ? (
+                    {shouldUseFlashlight ? (
                         <>
                             <Flashlight className="w-4 h-4 text-green-500" />
                             <span>{t('home.flashlightReady')}</span>
@@ -146,7 +156,7 @@ export function Home() {
             )}>
                 <div className={clsx(
                     "w-64 h-64 rounded-full blur-3xl",
-                    isSupported ? "bg-blue-500/20" : "bg-white"
+                    shouldUseFlashlight ? "bg-blue-500/20" : "bg-white"
                 )} />
             </div>
         </div>

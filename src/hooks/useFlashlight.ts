@@ -1,64 +1,51 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+import { registerPlugin } from '@capacitor/core';
+
+export interface FlashlightPlugin {
+    isAvailable(): Promise<{ value: boolean }>;
+    switchOn(options?: { intensity?: number }): Promise<void>;
+    switchOff(): Promise<void>;
+    isSwitchedOn(): Promise<{ value: boolean }>;
+}
+
+const Flashlight = registerPlugin<FlashlightPlugin>('Flashlight');
 
 export function useFlashlight() {
     const [isSupported, setIsSupported] = useState(false);
     const [isOn, setIsOn] = useState(false);
-    const trackRef = useRef<MediaStreamTrack | null>(null);
 
     useEffect(() => {
-        async function initFlashlight() {
+        async function checkSupport() {
             try {
-                const devices = await navigator.mediaDevices.enumerateDevices();
-                const cameras = devices.filter(device => device.kind === 'videoinput');
-
-                if (cameras.length === 0) {
-                    console.log('No cameras found');
-                    return;
-                }
-
-                // Try to get the back camera
-                const stream = await navigator.mediaDevices.getUserMedia({
-                    video: {
-                        facingMode: 'environment'
-                    }
-                });
-
-                const track = stream.getVideoTracks()[0];
-                const capabilities = track.getCapabilities();
-
-                // Check if torch is supported
-                // @ts-ignore - torch is not in standard types yet
-                if (capabilities.torch) {
-                    trackRef.current = track;
-                    setIsSupported(true);
-                } else {
-                    // Clean up if no torch
-                    track.stop();
-                }
+                const result = await Flashlight.isAvailable();
+                setIsSupported(result.value);
             } catch (err) {
-                console.error('Flashlight initialization failed:', err);
+                console.error('Flashlight check failed:', err);
+                setIsSupported(false);
             }
         }
 
-        initFlashlight();
+        checkSupport();
 
+        // Cleanup: ensure flashlight is off when unmounting
         return () => {
-            if (trackRef.current) {
-                trackRef.current.stop();
-            }
+            Flashlight.switchOff().catch(() => { });
         };
     }, []);
 
     const toggle = useCallback(async (state: boolean) => {
-        setIsOn(state);
-        if (trackRef.current && isSupported) {
-            try {
-                await trackRef.current.applyConstraints({
-                    advanced: [{ torch: state }] as any
-                });
-            } catch (err) {
-                console.error('Failed to toggle flashlight:', err);
+        if (!isSupported) return;
+
+        try {
+            if (state) {
+                await Flashlight.switchOn({ intensity: 1.0 });
+                setIsOn(true);
+            } else {
+                await Flashlight.switchOff();
+                setIsOn(false);
             }
+        } catch (err) {
+            console.error('Failed to toggle flashlight:', err);
         }
     }, [isSupported]);
 

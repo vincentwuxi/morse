@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Home, BookOpen, Settings, MessageSquare, X, Check } from 'lucide-react';
 import { clsx } from 'clsx';
 import { useLanguage } from '../contexts/LanguageContext';
+import { useSettings, TransmissionMode } from '../contexts/SettingsContext';
 import { Language } from '../i18n/translations';
 
 interface LayoutProps {
@@ -12,6 +13,7 @@ interface LayoutProps {
 export function Layout({ children }: LayoutProps) {
     const location = useLocation();
     const { t, language, setLanguage } = useLanguage();
+    const { transmissionMode, setTransmissionMode } = useSettings();
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
     const navItems = [
@@ -22,7 +24,7 @@ export function Layout({ children }: LayoutProps) {
 
     return (
         <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col">
-            <header className="p-4 border-b border-slate-800 flex justify-between items-center bg-slate-900/50 backdrop-blur-sm sticky top-0 z-10">
+            <header className="p-4 pt-safe border-b border-slate-800 flex justify-between items-center bg-slate-900/50 backdrop-blur-sm sticky top-0 z-10">
                 <h1 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
                     {t('app.title')}
                 </h1>
@@ -95,6 +97,32 @@ export function Layout({ children }: LayoutProps) {
                                         >
                                             <span className="font-medium">{lang.label}</span>
                                             {language === lang.code && <Check className="w-5 h-5" />}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div>
+                                <label className="text-sm font-medium text-slate-400 mb-3 block">
+                                    {t('settings.transmissionMode')}
+                                </label>
+                                <div className="grid gap-2">
+                                    {[
+                                        { mode: 'flashlight', label: t('settings.flashlight') },
+                                        { mode: 'screen', label: t('settings.screen') }
+                                    ].map((option) => (
+                                        <button
+                                            key={option.mode}
+                                            onClick={() => setTransmissionMode(option.mode as TransmissionMode)}
+                                            className={clsx(
+                                                "flex items-center justify-between p-4 rounded-xl border transition-all",
+                                                transmissionMode === option.mode
+                                                    ? "bg-blue-500/10 border-blue-500/50 text-blue-400"
+                                                    : "bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700"
+                                            )}
+                                        >
+                                            <span className="font-medium">{option.label}</span>
+                                            {transmissionMode === option.mode && <Check className="w-5 h-5" />}
                                         </button>
                                     ))}
                                 </div>

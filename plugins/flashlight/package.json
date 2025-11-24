@@ -1,0 +1,18 @@
+{
+    "name": "capacitor-flashlight",
+    "version": "0.0.1",
+    "description": "Local flashlight plugin",
+    "main": "dist/plugin.js",
+    "module": "dist/esm/index.js",
+    "types": "dist/esm/index.d.ts",
+    "scripts": {
+        "build": "echo 'No build needed for local native plugin'"
+    },
+    "author": "",
+    "license": "MIT",
+    "capacitor": {
+        "ios": {
+            "src": "ios"
+        }
+    }
+}
