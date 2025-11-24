@@ -1,0 +1,130 @@
+export type Language = 'en' | 'zh';
+
+export const translations = {
+    en: {
+        app: {
+            title: 'Morse Light',
+            nav: {
+                home: 'Home',
+                phrases: 'Phrases',
+                tutorial: 'Tutorial',
+                settings: 'Settings',
+            },
+        },
+        home: {
+            placeholder: 'Enter text to transmit...',
+            chars: 'chars',
+            clear: 'Clear',
+            preview: 'Morse preview will appear here',
+            start: 'START TRANSMISSION',
+            stop: 'STOP TRANSMISSION',
+            flashlightReady: 'Flashlight Ready',
+            screenFlash: 'Using Screen Flash',
+        },
+        phrases: {
+            title: 'Common Phrases',
+            subtitle: 'Quick access to emergency signals',
+            items: {
+                SOS: 'SOS',
+                HELP: 'HELP',
+                WATER: 'WATER',
+                FOOD: 'FOOD',
+                MEDICAL: 'MEDICAL',
+                YES: 'YES',
+                NO: 'NO',
+                SAFE: 'SAFE',
+                DANGER: 'DANGER',
+                LOST: 'LOST',
+            },
+        },
+        tutorial: {
+            title: 'How to Use',
+            subtitle: 'Guide to Morse Light',
+            basic: {
+                title: 'Basic Operation',
+                step1: 'Type your message in the text box on the Home screen.',
+                step2: 'Press START TRANSMISSION to begin sending.',
+                step3: "Point your device's flashlight towards the recipient. Ensure a clear line of sight.",
+            },
+            emergency: {
+                title: 'Emergency Signals',
+                desc: 'The most important signal to know is SOS. It is a universal distress signal.',
+            },
+            tips: {
+                title: 'Tips',
+                tip1: 'Keep messages short and simple.',
+                tip2: 'Wait for acknowledgment (usually a flash back) before repeating.',
+                tip3: 'If flashlight is unavailable, the screen will flash white instead. Turn up your brightness!',
+            },
+        },
+        settings: {
+            title: 'Settings',
+            language: 'Language',
+            selectLanguage: 'Select Language',
+            close: 'Close',
+        },
+    },
+    zh: {
+        app: {
+            title: '摩斯电码手电筒',
+            nav: {
+                home: '首页',
+                phrases: '短语',
+                tutorial: '教程',
+                settings: '设置',
+            },
+        },
+        home: {
+            placeholder: '在此输入您想发送的信息...',
+            chars: '字符',
+            clear: '清除',
+            preview: '摩斯电码预览',
+            start: '开始传输',
+            stop: '停止传输',
+            flashlightReady: '手电筒就绪',
+            screenFlash: '使用屏幕闪烁',
+        },
+        phrases: {
+            title: '预设短语',
+            subtitle: '快速发送紧急信号',
+            items: {
+                SOS: 'SOS',
+                HELP: '我需要帮助',
+                WATER: '水',
+                FOOD: '食物',
+                MEDICAL: '需要医疗援助',
+                YES: '是',
+                NO: '否',
+                SAFE: '我没事',
+                DANGER: '危险',
+                LOST: '我迷路了',
+            },
+        },
+        tutorial: {
+            title: '如何使用',
+            subtitle: '摩斯电码手电筒使用指南',
+            basic: {
+                title: '操作指南',
+                step1: '在主屏幕上输入您想要发送的文本。',
+                step2: '按下“开始传输”按钮。',
+                step3: '将手电筒对准接收者。确保视线清晰，以便传输能被看到。',
+            },
+            emergency: {
+                title: '紧急信号',
+                desc: '最重要的信号是 SOS。它是通用的求救信号。',
+            },
+            tips: {
+                title: '提示',
+                tip1: '保持信息简短。',
+                tip2: '在重复发送之前，等待对方确认（通常是闪烁回应）。',
+                tip3: '如果手电筒不可用，屏幕将闪烁白色。请调高屏幕亮度！',
+            },
+        },
+        settings: {
+            title: '设置',
+            language: '语言',
+            selectLanguage: '选择语言',
+            close: '关闭',
+        },
+    },
+};
