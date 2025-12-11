@@ -6,23 +6,23 @@ PODS:
     - Capacitor
 
 DEPENDENCIES:
-  - "Capacitor (from `../../node_modules/@capacitor/ios`)"
-  - "CapacitorCordova (from `../../node_modules/@capacitor/ios`)"
-  - CapacitorFlashlight (from `../../plugins/flashlight`)
+  - "Capacitor (from `../../node_modules/.pnpm/@capacitor+ios@7.4.4_@capacitor+core@7.4.4/node_modules/@capacitor/ios`)"
+  - "CapacitorCordova (from `../../node_modules/.pnpm/@capacitor+ios@7.4.4_@capacitor+core@7.4.4/node_modules/@capacitor/ios`)"
+  - "CapacitorFlashlight (from `../../node_modules/.pnpm/capacitor-flashlight@file+plugins+flashlight/node_modules/capacitor-flashlight`)"
 
 EXTERNAL SOURCES:
   Capacitor:
-    :path: "../../node_modules/@capacitor/ios"
+    :path: "../../node_modules/.pnpm/@capacitor+ios@7.4.4_@capacitor+core@7.4.4/node_modules/@capacitor/ios"
   CapacitorCordova:
-    :path: "../../node_modules/@capacitor/ios"
+    :path: "../../node_modules/.pnpm/@capacitor+ios@7.4.4_@capacitor+core@7.4.4/node_modules/@capacitor/ios"
   CapacitorFlashlight:
-    :path: "../../plugins/flashlight"
+    :path: "../../node_modules/.pnpm/capacitor-flashlight@file+plugins+flashlight/node_modules/capacitor-flashlight"
 
 SPEC CHECKSUMS:
   Capacitor: 358dd1c3fdd71d969547b17e159fd8a7736cb45f
   CapacitorCordova: bf648a636f3c153f652d312ae145fb508b6ffced
   CapacitorFlashlight: 298a51c044698183670b4d2cda8e03b249507f52
 
-PODFILE CHECKSUM: f08b721e216b0aa9e36524446873b5d9a09c7043
+PODFILE CHECKSUM: 0d776f305d6a255e7cf40435897c2812f8851771
 
 COCOAPODS: 1.16.2

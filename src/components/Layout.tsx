@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, BookOpen, Settings, MessageSquare, X, Check } from 'lucide-react';
+import { Home, BookOpen, Settings, MessageSquare, X, Check, ChevronDown } from 'lucide-react';
 import { clsx } from 'clsx';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useSettings, TransmissionMode } from '../contexts/SettingsContext';
-import { Language } from '../i18n/translations';
+import { Language, LANGUAGE_OPTIONS } from '../i18n/translations';
 
 interface LayoutProps {
     children: React.ReactNode;
@@ -80,25 +80,19 @@ export function Layout({ children }: LayoutProps) {
                                 <label className="text-sm font-medium text-slate-400 mb-3 block">
                                     {t('settings.language')}
                                 </label>
-                                <div className="grid gap-2">
-                                    {[
-                                        { code: 'en', label: 'English' },
-                                        { code: 'zh', label: '中文' }
-                                    ].map((lang) => (
-                                        <button
-                                            key={lang.code}
-                                            onClick={() => setLanguage(lang.code as Language)}
-                                            className={clsx(
-                                                "flex items-center justify-between p-4 rounded-xl border transition-all",
-                                                language === lang.code
-                                                    ? "bg-blue-500/10 border-blue-500/50 text-blue-400"
-                                                    : "bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700"
-                                            )}
-                                        >
-                                            <span className="font-medium">{lang.label}</span>
-                                            {language === lang.code && <Check className="w-5 h-5" />}
-                                        </button>
-                                    ))}
+                                <div className="relative">
+                                    <select
+                                        value={language}
+                                        onChange={(e) => setLanguage(e.target.value as Language)}
+                                        className="w-full appearance-none bg-slate-800 border border-slate-700 text-slate-100 p-4 pr-12 rounded-xl text-base font-medium cursor-pointer hover:bg-slate-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500"
+                                    >
+                                        {LANGUAGE_OPTIONS.map((lang) => (
+                                            <option key={lang.code} value={lang.code}>
+                                                {lang.nativeLabel} ({lang.label})
+                                            </option>
+                                        ))}
+                                    </select>
+                                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 pointer-events-none" />
                                 </div>
                             </div>
 
