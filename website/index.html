@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Light - Transmit Messages with Light</title>
+    <meta name="description"
+        content="Morse Light is a mobile app that lets you transmit Morse code messages using your device's flashlight or screen. Perfect for emergencies and learning Morse code.">
+    <meta name="keywords" content="morse code, flashlight, emergency signal, SOS, communication, mobile app">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Morse Light - Transmit Messages with Light">
+    <meta property="og:description"
+        content="Transform your phone into a Morse code transmitter. Use flashlight or screen flash to send messages.">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <span class="logo-icon">🔦</span>
+                <span class="logo-text" data-i18n="app.title">Morse Light</span>
+            </div>
+            <div class="language-selector">
+                <select id="language-select" aria-label="Select Language">
+                    <option value="en">English</option>
+                    <option value="zh">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="es">Español</option>
+                    <option value="ja">日本語</option>
+                    <option value="it">Italiano</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ru">Русский</option>
+                    <option value="ar">العربية</option>
+                    <option value="pt">Português</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="tr">Türkçe</option>
+                    <option value="ko">한국어</option>
+                    <option value="ms">Bahasa Melayu</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-icon">📱</div>
+            <h1 class="hero-title" data-i18n="hero.title">Morse Light</h1>
+            <p class="hero-tagline" data-i18n="hero.tagline">Transmit messages with light</p>
+            <p class="hero-description" data-i18n="hero.description">
+                Transform your smartphone into a powerful Morse code transmitter.
+                Use your flashlight or screen to send emergency signals or learn Morse code.
+            </p>
+            <a href="#" class="download-btn" id="download-btn">
+                <span class="download-icon">📥</span>
+                <span data-i18n="hero.download">Download for iOS</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title" data-i18n="features.title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔦</div>
+                    <h3 class="feature-title" data-i18n="features.flashlight.title">Flashlight Mode</h3>
+                    <p class="feature-desc" data-i18n="features.flashlight.desc">
+                        Use your device's hardware flashlight to transmit Morse code signals with maximum visibility.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title" data-i18n="features.screen.title">Screen Flash</h3>
+                    <p class="feature-desc" data-i18n="features.screen.desc">
+                        Full-screen black and white flash mode with 3-2-1 countdown for maximum clarity.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🆘</div>
+                    <h3 class="feature-title" data-i18n="features.emergency.title">Emergency Signals</h3>
+                    <p class="feature-desc" data-i18n="features.emergency.desc">
+                        Quick access to predefined emergency phrases like SOS, HELP, and more.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3 class="feature-title" data-i18n="features.languages.title">16 Languages</h3>
+                    <p class="feature-desc" data-i18n="features.languages.desc">
+                        Full interface support for 16 languages with automatic detection based on your device settings.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title" data-i18n="howItWorks.title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title" data-i18n="howItWorks.step1.title">Type Your Message</h3>
+                    <p class="step-desc" data-i18n="howItWorks.step1.desc">
+                        Enter any text and see it converted to Morse code in real-time.
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title" data-i18n="howItWorks.step2.title">Choose Mode</h3>
+                    <p class="step-desc" data-i18n="howItWorks.step2.desc">
+                        Select flashlight or screen flash mode based on your situation.
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title" data-i18n="howItWorks.step3.title">Transmit</h3>
+                    <p class="step-desc" data-i18n="howItWorks.step3.desc">
+                        Press start and your device will flash the Morse code signal.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section class="languages-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="languagesSection.title">Available in 16 Languages</h2>
+            <div class="languages-grid">
+                <span class="language-tag">English</span>
+                <span class="language-tag">简体中文</span>
+                <span class="language-tag">繁體中文</span>
+                <span class="language-tag">Español</span>
+                <span class="language-tag">日本語</span>
+                <span class="language-tag">Italiano</span>
+                <span class="language-tag">Deutsch</span>
+                <span class="language-tag">Français</span>
+                <span class="language-tag">Русский</span>
+                <span class="language-tag">العربية</span>
+                <span class="language-tag">Português</span>
+                <span class="language-tag">हिन्दी</span>
+                <span class="language-tag">Nederlands</span>
+                <span class="language-tag">Türkçe</span>
+                <span class="language-tag">한국어</span>
+                <span class="language-tag">Bahasa Melayu</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container cta-content">
+            <h2 class="cta-title" data-i18n="cta.title">Ready to Communicate with Light?</h2>
+            <p class="cta-desc" data-i18n="cta.desc">Download Morse Light now and learn the universal language of dots
+                and dashes.</p>
+            <a href="#" class="download-btn download-btn-large" id="download-btn-footer">
+                <span class="download-icon">📥</span>
+                <span data-i18n="hero.download">Download for iOS</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="copyright" data-i18n="footer.copyright">© 2025 Morse Light. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+                <a href="#" data-i18n="footer.terms">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

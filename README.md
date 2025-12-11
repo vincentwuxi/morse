@@ -336,9 +336,40 @@ A: When using Screen Flash mode, a 3-2-1 countdown appears before transmission b
 
 ## Changelog / 更新日志
 
+### v1.1.0 (2025-12-11)
+- 🌐 Added product website (`website/`) with 16 language support
+- 🌐 Website auto-detects browser language
+- 🌐 Ready for Cloudflare Pages deployment
+
 ### v1.0.0 (2025-12-11)
 - ✨ Added support for 16 languages with auto-detection
 - ✨ Added countdown timer (3, 2, 1) for screen flash mode
 - ✨ Full-screen black-and-white flash mode for better visibility
 - 🔧 Language selection changed to dropdown menu
 - 🔧 Improved UI/UX in settings panel
+
+---
+
+## Product Website / 产品网站
+
+A product landing page is available in the `website/` directory.
+
+### Features
+- 📱 Responsive single-page design
+- 🌍 16 languages with auto-detection
+- 🎨 Dark theme matching the app
+- ☁️ Ready for Cloudflare Pages deployment
+
+### Local Preview
+```bash
+cd website
+python3 -m http.server 8080
+# Visit http://localhost:8080
+```
+
+### Deploy to Cloudflare Pages
+1. Go to [Cloudflare Dashboard](https://dash.cloudflare.com) → Workers & Pages
+2. Create new Pages project
+3. Upload the `website/` folder or connect via Git
+4. Your site will be live at `*.pages.dev`
+
