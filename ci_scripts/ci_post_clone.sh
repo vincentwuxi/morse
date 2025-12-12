@@ -30,3 +30,4 @@ echo "🚀 Running pod install..."
 pod install --repo-update
 
 echo "✅ CocoaPods installation completed!"
+# Force git update 2025年12月13日 星期六 00时29分48秒 CST
