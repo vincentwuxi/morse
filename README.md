@@ -336,6 +336,10 @@ A: When using Screen Flash mode, a 3-2-1 countdown appears before transmission b
 
 ## Changelog / 更新日志
 
+### v1.2.0 (2025-12-12)
+- 📱 Renamed iOS app to "Morse Light"
+- 🔧 Updated app configuration and metadata
+
 ### v1.1.0 (2025-12-11)
 - 🌐 Added product website (`website/`) with 16 language support
 - 🌐 Website auto-detects browser language
