@@ -42,6 +42,13 @@ const translations = {
             title: 'Ready to Communicate with Light?',
             desc: 'Download Morse Light now and learn the universal language of dots and dashes.'
         },
+        privacyPolicy: {
+            title: 'Privacy Policy & Terms of Service',
+            dataCollection: 'We do not collect any personal information from our users.',
+            support: 'This application is provided "as is" without any technical support.',
+            cost: 'This application is completely free to use.',
+            back: 'Back to Home'
+        },
         footer: {
             copyright: '© 2025 Morse Light. All rights reserved.',
             privacy: 'Privacy Policy',
@@ -86,6 +93,13 @@ const translations = {
             title: '准备好用光通讯了吗？',
             desc: '立即下载摩斯电码手电筒，学习点和划的通用语言。'
         },
+        privacyPolicy: {
+            title: '隐私政策与服务条款',
+            dataCollection: '我们不收集用户的任何个人信息。',
+            support: '本应用程序"按原样"提供，不提供任何技术支持。',
+            cost: '本应用程序完全免费使用。',
+            back: '返回首页'
+        },
         footer: {
             copyright: '© 2025 摩斯电码手电筒。保留所有权利。',
             privacy: '隐私政策',
@@ -115,6 +129,13 @@ const translations = {
         },
         languagesSection: { title: '支援16種語言' },
         cta: { title: '準備好用光通訊了嗎？', desc: '立即下載摩斯電碼手電筒，學習點和劃的通用語言。' },
+        privacyPolicy: {
+            title: '隱私權政策與服務條款',
+            dataCollection: '我們不收集用戶的任何個人資訊。',
+            support: '本應用程式「按原樣」提供，不提供任何技術支援。',
+            cost: '本應用程式完全免費使用。',
+            back: '返回首頁'
+        },
         footer: { copyright: '© 2025 摩斯電碼手電筒。保留所有權利。', privacy: '隱私權政策', terms: '服務條款' }
     },
     es: {
@@ -140,6 +161,13 @@ const translations = {
         },
         languagesSection: { title: 'Disponible en 16 Idiomas' },
         cta: { title: '¿Listo para Comunicarte con Luz?', desc: 'Descarga Luz Morse ahora y aprende el lenguaje universal de puntos y rayas.' },
+        privacyPolicy: {
+            title: 'Política de Privacidad y Términos de Servicio',
+            dataCollection: 'No recopilamos ninguna información personal de nuestros usuarios.',
+            support: 'Esta aplicación se proporciona "tal cual" sin ningún soporte técnico.',
+            cost: 'Esta aplicación es completamente gratuita.',
+            back: 'Volver al Inicio'
+        },
         footer: { copyright: '© 2025 Luz Morse. Todos los derechos reservados.', privacy: 'Política de Privacidad', terms: 'Términos de Servicio' }
     },
     ja: {
@@ -165,6 +193,13 @@ const translations = {
         },
         languagesSection: { title: '16言語で利用可能' },
         cta: { title: '光でコミュニケーションする準備はできましたか？', desc: 'モールスライトを今すぐダウンロードして、点と線の国際言語を学びましょう。' },
+        privacyPolicy: {
+            title: 'プライバシーポリシーと利用規約',
+            dataCollection: 'ユーザーから個人情報を収集することはありません。',
+            support: '本アプリケーションは「現状のまま」提供され、技術サポートは提供されません。',
+            cost: '本アプリケーションは完全に無料で使用できます。',
+            back: 'ホームに戻る'
+        },
         footer: { copyright: '© 2025 モールスライト. All rights reserved.', privacy: 'プライバシーポリシー', terms: '利用規約' }
     },
     it: {
@@ -190,6 +225,13 @@ const translations = {
         },
         languagesSection: { title: 'Disponibile in 16 Lingue' },
         cta: { title: 'Pronto a Comunicare con la Luce?', desc: 'Scarica Luce Morse ora e impara il linguaggio universale di punti e linee.' },
+        privacyPolicy: {
+            title: 'Informativa sulla Privacy e Termini di Servizio',
+            dataCollection: 'Non raccogliamo alcuna informazione personale dai nostri utenti.',
+            support: 'Questa applicazione è fornita "così com\'è" senza alcun supporto tecnico.',
+            cost: 'Questa applicazione è completamente gratuita.',
+            back: 'Torna alla Home'
+        },
         footer: { copyright: '© 2025 Luce Morse. Tutti i diritti riservati.', privacy: 'Informativa sulla Privacy', terms: 'Termini di Servizio' }
     },
     de: {
@@ -215,6 +257,13 @@ const translations = {
         },
         languagesSection: { title: 'Verfügbar in 16 Sprachen' },
         cta: { title: 'Bereit, mit Licht zu kommunizieren?', desc: 'Laden Sie Morse Licht jetzt herunter und lernen Sie die universelle Sprache von Punkten und Strichen.' },
+        privacyPolicy: {
+            title: 'Datenschutzerklärung & Nutzungsbedingungen',
+            dataCollection: 'Wir sammeln keine persönlichen Daten von unseren Nutzern.',
+            support: 'Diese Anwendung wird "wie besehen" ohne technischen Support bereitgestellt.',
+            cost: 'Diese Anwendung ist völlig kostenlos.',
+            back: 'Zurück zur Startseite'
+        },
         footer: { copyright: '© 2025 Morse Licht. Alle Rechte vorbehalten.', privacy: 'Datenschutzrichtlinie', terms: 'Nutzungsbedingungen' }
     },
     fr: {
@@ -240,6 +289,13 @@ const translations = {
         },
         languagesSection: { title: 'Disponible en 16 Langues' },
         cta: { title: 'Prêt à Communiquer avec la Lumière?', desc: 'Téléchargez Lumière Morse maintenant et apprenez le langage universel des points et des traits.' },
+        privacyPolicy: {
+            title: 'Politique de Confidentialité et Conditions d\'Utilisation',
+            dataCollection: 'Nous ne collectons aucune information personnelle de nos utilisateurs.',
+            support: 'Cette application est fournie "telle quelle" sans aucun support technique.',
+            cost: 'Cette application est entièrement gratuite.',
+            back: 'Retour à l\'accueil'
+        },
         footer: { copyright: '© 2025 Lumière Morse. Tous droits réservés.', privacy: 'Politique de Confidentialité', terms: 'Conditions d\'Utilisation' }
     },
     ru: {
@@ -265,6 +321,13 @@ const translations = {
         },
         languagesSection: { title: 'Доступно на 16 Языках' },
         cta: { title: 'Готовы Общаться Светом?', desc: 'Скачайте Морзе Свет сейчас и изучите универсальный язык точек и тире.' },
+        privacyPolicy: {
+            title: 'Политика Конфиденциальности и Условия Использования',
+            dataCollection: 'Мы не собираем никакой личной информации от наших пользователей.',
+            support: 'Это приложение предоставляется «как есть» без какой-либо технической поддержки.',
+            cost: 'Это приложение полностью бесплатно для использования.',
+            back: 'Назад на Главную'
+        },
         footer: { copyright: '© 2025 Морзе Свет. Все права защищены.', privacy: 'Политика Конфиденциальности', terms: 'Условия Использования' }
     },
     ar: {
@@ -290,6 +353,13 @@ const translations = {
         },
         languagesSection: { title: 'متوفر بـ 16 لغة' },
         cta: { title: 'مستعد للتواصل بالضوء؟', desc: 'حمّل ضوء مورس الآن وتعلم اللغة العالمية للنقاط والشرطات.' },
+        privacyPolicy: {
+            title: 'سياسة الخصوصية وشروط الخدمة',
+            dataCollection: 'نحن لا نجمع أي معلومات شخصية من مستخدمينا.',
+            support: 'يتم توفير هذا التطبيق "كما هو" دون أي دعم فني.',
+            cost: 'هذا التطبيق مجاني تمامًا للاستخدام.',
+            back: 'العودة للرئيسية'
+        },
         footer: { copyright: '© 2025 ضوء مورس. جميع الحقوق محفوظة.', privacy: 'سياسة الخصوصية', terms: 'شروط الخدمة' }
     },
     pt: {
@@ -315,6 +385,13 @@ const translations = {
         },
         languagesSection: { title: 'Disponível em 16 Idiomas' },
         cta: { title: 'Pronto para Comunicar com Luz?', desc: 'Baixe Luz Morse agora e aprenda a linguagem universal de pontos e traços.' },
+        privacyPolicy: {
+            title: 'Política de Privacidade e Termos de Serviço',
+            dataCollection: 'Não coletamos nenhuma informação pessoal de nossos usuários.',
+            support: 'Este aplicativo é fornecido "no estado em que se encontra" sem qualquer suporte técnico.',
+            cost: 'Este aplicativo é totalmente gratuito para uso.',
+            back: 'Voltar ao Início'
+        },
         footer: { copyright: '© 2025 Luz Morse. Todos os direitos reservados.', privacy: 'Política de Privacidade', terms: 'Termos de Serviço' }
     },
     hi: {
@@ -340,6 +417,13 @@ const translations = {
         },
         languagesSection: { title: '16 भाषाओं में उपलब्ध' },
         cta: { title: 'रोशनी से संवाद करने के लिए तैयार?', desc: 'मोर्स लाइट अभी डाउनलोड करें और डॉट्स और डैश की सार्वभौमिक भाषा सीखें।' },
+        privacyPolicy: {
+            title: 'गोपनीयता नीति और सेवा की शर्तें',
+            dataCollection: 'हम अपने उपयोगकर्ताओं से कोई व्यक्तिगत जानकारी एकत्र नहीं करते हैं।',
+            support: 'यह एप्लिकेशन "जैसा है" प्रदान किया जाता है, बिना किसी तकनीकी सहायता के।',
+            cost: 'यह एप्लिकेशन उपयोग करने के लिए पूरी तरह से मुफ़्त है।',
+            back: 'होम पर वापस जाएं'
+        },
         footer: { copyright: '© 2025 मोर्स लाइट। सर्वाधिकार सुरक्षित।', privacy: 'गोपनीयता नीति', terms: 'सेवा की शर्तें' }
     },
     nl: {
@@ -365,6 +449,13 @@ const translations = {
         },
         languagesSection: { title: 'Beschikbaar in 16 Talen' },
         cta: { title: 'Klaar om te Communiceren met Licht?', desc: 'Download Morse Licht nu en leer de universele taal van punten en strepen.' },
+        privacyPolicy: {
+            title: 'Privacybeleid & Servicevoorwaarden',
+            dataCollection: 'Wij verzamelen geen persoonlijke informatie van onze gebruikers.',
+            support: 'Deze applicatie wordt geleverd "zoals deze is" zonder technische ondersteuning.',
+            cost: 'Deze applicatie is volledig gratis te gebruiken.',
+            back: 'Terug naar Home'
+        },
         footer: { copyright: '© 2025 Morse Licht. Alle rechten voorbehouden.', privacy: 'Privacybeleid', terms: 'Servicevoorwaarden' }
     },
     tr: {
@@ -390,6 +481,13 @@ const translations = {
         },
         languagesSection: { title: '16 Dilde Mevcut' },
         cta: { title: 'Işıkla İletişim Kurmaya Hazır mısınız?', desc: 'Mors Işığını şimdi indirin ve nokta ve çizgilerin evrensel dilini öğrenin.' },
+        privacyPolicy: {
+            title: 'Gizlilik Politikası ve Hizmet Şartları',
+            dataCollection: 'Kullanıcılarımızdan herhangi bir kişisel bilgi toplamıyoruz.',
+            support: 'Bu uygulama herhangi bir teknik destek olmaksızın "olduğu gibi" sağlanmaktadır.',
+            cost: 'Bu uygulamanın kullanımı tamamen ücretsizdir.',
+            back: 'Ana Sayfaya Dön'
+        },
         footer: { copyright: '© 2025 Mors Işığı. Tüm hakları saklıdır.', privacy: 'Gizlilik Politikası', terms: 'Hizmet Şartları' }
     },
     ko: {
@@ -415,6 +513,13 @@ const translations = {
         },
         languagesSection: { title: '16개 언어로 이용 가능' },
         cta: { title: '빛으로 소통할 준비가 되셨나요?', desc: '모스 라이트를 지금 다운로드하고 점과 선의 세계 공용어를 배우세요.' },
+        privacyPolicy: {
+            title: '개인정보 처리방침 및 서비스 약관',
+            dataCollection: '저희는 사용자로부터 어떠한 개인 정보도 수집하지 않습니다.',
+            support: '본 애플리케이션은 기술 지원 없이 "있는 그대로" 제공됩니다.',
+            cost: '본 애플리케이션은 완전히 무료로 사용할 수 있습니다.',
+            back: '홈으로 돌아가기'
+        },
         footer: { copyright: '© 2025 모스 라이트. All rights reserved.', privacy: '개인정보 처리방침', terms: '서비스 약관' }
     },
     ms: {
@@ -440,6 +545,13 @@ const translations = {
         },
         languagesSection: { title: 'Tersedia dalam 16 Bahasa' },
         cta: { title: 'Bersedia untuk Berkomunikasi dengan Cahaya?', desc: 'Muat turun Lampu Morse sekarang dan pelajari bahasa universal titik dan sengkang.' },
+        privacyPolicy: {
+            title: 'Dasar Privasi & Terma Perkhidmatan',
+            dataCollection: 'Kami tidak mengumpul sebarang maklumat peribadi daripada pengguna kami.',
+            support: 'Aplikasi ini disediakan "seadanya" tanpa sebarang sokongan teknikal.',
+            cost: 'Aplikasi ini percuma sepenuhnya untuk digunakan.',
+            back: 'Kembali ke Laman Utama'
+        },
         footer: { copyright: '© 2025 Lampu Morse. Hak cipta terpelihara.', privacy: 'Dasar Privasi', terms: 'Terma Perkhidmatan' }
     }
 };
