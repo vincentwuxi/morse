@@ -8,6 +8,14 @@ echo "🧩 Starting Post-Clone Script..."
 cd "$(dirname "$0")/../../.."
 echo "📂 Repository root: $(pwd)"
 
+# 安装 Node.js（如果不存在）
+if ! command -v node >/dev/null 2>&1; then
+  echo "📦 Installing Node.js..."
+  brew install node
+else
+  echo "📦 Node.js already installed: $(node --version)"
+fi
+
 # 安装 Node.js 依赖（Podfile 需要 node_modules）
 echo "📦 Installing Node.js dependencies..."
 npm install
@@ -16,7 +24,7 @@ npm install
 cd ios/App
 echo "📂 iOS App directory: $(pwd)"
 
-# 安装 CocoaPods
+# 安装 CocoaPods（如果不存在）
 if ! command -v pod >/dev/null 2>&1; then
   echo "📦 Installing CocoaPods..."
   brew install cocoapods
