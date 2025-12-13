@@ -4,9 +4,17 @@ export LANG=en_US.UTF-8
 
 echo "🧩 Starting Post-Clone Script..."
 
-# 首先回到 ios/App 目录（ci_scripts 的上级目录）
-cd "$(dirname "$0")/.."
-echo "📂 Working directory: $(pwd)"
+# 回到仓库根目录
+cd "$(dirname "$0")/../../.."
+echo "📂 Repository root: $(pwd)"
+
+# 安装 Node.js 依赖（Podfile 需要 node_modules）
+echo "📦 Installing Node.js dependencies..."
+npm install
+
+# 进入 iOS 项目目录
+cd ios/App
+echo "📂 iOS App directory: $(pwd)"
 
 # 安装 CocoaPods
 if ! command -v pod >/dev/null 2>&1; then
@@ -25,7 +33,7 @@ fi
 
 echo "✅ Found Podfile in $(pwd)"
 
-# 安装依赖
+# 安装 Pods 依赖
 echo "🚀 Running pod install..."
 pod install --repo-update
 
