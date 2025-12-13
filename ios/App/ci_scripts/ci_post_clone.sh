@@ -28,6 +28,14 @@ fi
 echo "📦 Installing Node.js dependencies with pnpm..."
 pnpm install
 
+# 构建 Web 应用
+echo "🔨 Building web app..."
+pnpm run build
+
+# 同步 Capacitor iOS（生成 public 目录和 config 文件）
+echo "🔄 Syncing Capacitor iOS..."
+pnpm exec cap sync ios
+
 # 进入 iOS 项目目录
 cd ios/App
 echo "📂 iOS App directory: $(pwd)"
@@ -53,4 +61,4 @@ echo "✅ Found Podfile in $(pwd)"
 echo "🚀 Running pod install..."
 pod install --repo-update
 
-echo "✅ CocoaPods installation completed!"
+echo "✅ CI Post-Clone Script Completed!"
