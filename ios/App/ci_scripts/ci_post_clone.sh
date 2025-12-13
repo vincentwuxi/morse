@@ -16,9 +16,17 @@ else
   echo "📦 Node.js already installed: $(node --version)"
 fi
 
-# 安装 Node.js 依赖（Podfile 需要 node_modules）
-echo "📦 Installing Node.js dependencies..."
-npm install
+# 安装 pnpm（项目使用 pnpm）
+if ! command -v pnpm >/dev/null 2>&1; then
+  echo "📦 Installing pnpm..."
+  npm install -g pnpm
+else
+  echo "📦 pnpm already installed: $(pnpm --version)"
+fi
+
+# 安装 Node.js 依赖（使用 pnpm）
+echo "📦 Installing Node.js dependencies with pnpm..."
+pnpm install
 
 # 进入 iOS 项目目录
 cd ios/App
