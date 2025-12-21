@@ -1,0 +1,3 @@
+/* Localized app name - Malay */
+CFBundleDisplayName = "Lampu Morse";
+CFBundleName = "Lampu Morse";

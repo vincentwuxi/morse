@@ -1,0 +1,3 @@
+/* Localized app name - Hindi */
+CFBundleDisplayName = "मोर्स लाइट";
+CFBundleName = "मोर्स लाइट";

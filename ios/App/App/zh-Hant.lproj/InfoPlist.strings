@@ -1,0 +1,3 @@
+/* Localized app name - Traditional Chinese */
+CFBundleDisplayName = "Morse 手電";
+CFBundleName = "Morse 手電";

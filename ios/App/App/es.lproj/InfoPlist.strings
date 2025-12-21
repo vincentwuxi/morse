@@ -1,0 +1,3 @@
+/* Localized app name - Spanish */
+CFBundleDisplayName = "Luz Morse";
+CFBundleName = "Luz Morse";

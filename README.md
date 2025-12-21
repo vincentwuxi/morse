@@ -1,6 +1,6 @@
 # Morse Light / 摩斯电码手电筒
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg) ![Version](https://img.shields.io/badge/version-1.0.0-green.svg) ![Languages](https://img.shields.io/badge/languages-16-orange.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg) ![Version](https://img.shields.io/badge/version-1.3.0-green.svg) ![Languages](https://img.shields.io/badge/languages-16-orange.svg)
 
 [English](#english) | [中文](#chinese)
 
@@ -18,7 +18,7 @@
 - **Text-to-Morse Conversion**: Real-time conversion of text input into Morse code signals.
 - **Flashlight Transmission**: Uses the device's hardware flashlight to transmit Morse code signals (requires permission).
 - **Screen Flash Mode**: Full-screen black-and-white flash mode with countdown timer (3, 2, 1) before transmission starts.
-- **Common Phrases**: Quick access to predefined emergency signals like SOS, HELP, WATER, etc.
+- **Common Phrases**: Quick access to 30 predefined signals organized in 5 categories (Emergency, Basic Responses, Status & Location, Needs & Requests, Common Messages).
 - **Interactive Tutorial**: Step-by-step guide on how to use the app and understand basic Morse code.
 - **Multi-Language Support**: Full support for 16 languages with auto-detection based on device settings.
 - **Playback Control**: Start and stop transmission at any time.
@@ -182,7 +182,7 @@ A: When using Screen Flash mode, a 3-2-1 countdown appears before transmission b
 - **文本转摩斯电码**：将输入的文本实时转换为摩斯电码信号。
 - **手电筒传输**：使用设备的硬件闪光灯发送摩斯电码信号（需要权限）。
 - **屏幕闪烁模式**：全屏黑白闪烁模式，传输开始前有倒计时动画（3、2、1）。
-- **常用短语**：快速访问预定义的紧急信号，如 SOS、HELP、WATER 等。
+- **常用短语**：快速访问 30 个预设信号，分为 5 个类别（紧急求救、基本回复、状态与位置、需求请求、常用消息）。
 - **交互式教程**：逐步指导如何使用应用程序和理解基本摩斯电码。
 - **多语言支持**：完全支持16种语言，根据设备设置自动检测语言。
 - **播放控制**：随时开始和停止传输。
@@ -335,6 +335,12 @@ A: When using Screen Flash mode, a 3-2-1 countdown appears before transmission b
 ---
 
 ## Changelog / 更新日志
+
+### v1.3.0 (2025-12-21)
+- ✨ Categorized preset phrases into 5 groups (Emergency, Basic Responses, Status & Location, Needs & Requests, Common Messages)
+- ✨ Expanded preset phrases from 10 to 30 items
+- 🌐 Added localized iOS app display names for all 16 languages
+- 🔧 Improved Phrases UI with 2-column grid layout and category icons
 
 ### v1.2.0 (2025-12-12)
 - 📱 Renamed iOS app to "Morse Light"

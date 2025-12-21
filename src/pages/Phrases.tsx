@@ -2,10 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { MessageSquare, ArrowRight } from 'lucide-react';
 import { textToMorse } from '../utils/morse';
 import { useLanguage } from '../contexts/LanguageContext';
-
-const COMMON_PHRASES = [
-    'SOS', 'HELP', 'WATER', 'FOOD', 'MEDICAL', 'YES', 'NO', 'SAFE', 'DANGER', 'LOST'
-];
+import { PHRASE_CATEGORIES } from '../data/phraseData';
 
 export function Phrases() {
     const navigate = useNavigate();
@@ -27,27 +24,41 @@ export function Phrases() {
                 </div>
             </div>
 
-            <div className="grid gap-3">
-                {COMMON_PHRASES.map((key) => {
-                    const label = t(`phrases.items.${key}`);
-                    const transmissionText = key; // The key itself is the English text for Morse transmission
+            <div className="flex flex-col gap-6">
+                {PHRASE_CATEGORIES.map((category) => (
+                    <div key={category.id} className="flex flex-col gap-2">
+                        {/* Category Header */}
+                        <div className="flex items-center gap-2 px-1">
+                            <span className="text-lg">{category.icon}</span>
+                            <span className="text-sm font-semibold text-slate-300">
+                                {t(`phrases.categories.${category.id}`)}
+                            </span>
+                        </div>
 
-                    return (
-                        <button
-                            key={key}
-                            onClick={() => handleSelect(transmissionText)}
-                            className="group bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 p-4 rounded-xl flex items-center justify-between transition-all active:scale-[0.99]"
-                        >
-                            <div className="flex flex-col items-start gap-1">
-                                <span className="font-bold text-slate-200">{label}</span>
-                                <span className="text-xs font-mono text-blue-400/80 tracking-wider">
-                                    {textToMorse(transmissionText)}
-                                </span>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-slate-600 group-hover:text-blue-400 transition-colors" />
-                        </button>
-                    );
-                })}
+                        {/* Phrase Grid */}
+                        <div className="grid grid-cols-2 gap-2">
+                            {category.phrases.map((key) => {
+                                const label = t(`phrases.items.${key}`);
+
+                                return (
+                                    <button
+                                        key={key}
+                                        onClick={() => handleSelect(key)}
+                                        className="group bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 p-3 rounded-xl flex flex-col items-start gap-1 transition-all active:scale-[0.98]"
+                                    >
+                                        <div className="w-full flex items-center justify-between">
+                                            <span className="font-bold text-slate-200 text-sm">{label}</span>
+                                            <ArrowRight className="w-4 h-4 text-slate-600 group-hover:text-blue-400 transition-colors" />
+                                        </div>
+                                        <span className="text-xs font-mono text-blue-400/80 tracking-wider truncate w-full">
+                                            {textToMorse(key)}
+                                        </span>
+                                    </button>
+                                );
+                            })}
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     );
